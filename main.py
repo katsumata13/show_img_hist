@@ -13,7 +13,6 @@ st.image(im, caption='image from wikimedia commons',
          use_column_width=True)
 
 
-
 # show histgram of all colors
 hist_red, _ = np.histogram(im[:, :, 0], bins=64)
 hist_green, _ = np.histogram(im[:, :, 1], bins=64)
@@ -22,7 +21,6 @@ hist = np.stack((hist_red, hist_green, hist_blue), axis=1)
 
 df_hist = pd.DataFrame(hist, columns=['R', 'G', 'B'])
 st.bar_chart(df_hist)
-
 
 
 # choose one color
